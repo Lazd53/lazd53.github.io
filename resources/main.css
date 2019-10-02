@@ -1,0 +1,416 @@
+/* colors: #02b3e4, #2d3c49, #7d97ad,  */
+
+/* VARIABLES--------------------------------------------------------- */
+:root {
+  --blue:#02b3e4;
+  --dgrey: #2d3c49;
+  --lgrey: #7d97ad;
+}
+/* BY TAG--------------------------------------------------------- */
+body {
+  font-family: 'Verdana';
+  height: 100vh;
+  width: 80%;
+  order: 1;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-rows: 100px 30px 1fr 20px;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "nav" "main" "footer";
+
+}
+
+header {
+  border-bottom: 3px solid var(--lgrey);
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  grid-area: nav;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  border-bottom: solid 1px var(--lgrey);
+  margin-bottom: 10px;
+}
+
+.navLink {
+  margin: 5px auto;
+  text-decoration: none;
+}
+
+main {
+  grid-area: main;
+}
+
+main.skills {
+}
+
+/* START HOME */
+
+.home section{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(3, 140px);
+  grid-row-gap: 30px;
+  grid-column-gap: 10px;
+}
+
+.homeGridItem{
+  display: flex;
+  align-items: center;
+  /* background-color: blue; */
+  position: relative;
+  margin: 0;
+}
+
+.homeH3{
+  color: white;
+  position: absolute;
+  top: 50%;
+  margin-top: -11px;
+  transition: left .5s;
+}
+
+.home .field{
+  transition: width .5s;
+  position: absolute;
+  height: 100%;
+}
+
+.home .gridHov:hover .field{
+  width: 0;
+}
+
+.home .gridHov:hover .homeH3{
+  left: 50%;
+}
+
+.home .projects{
+  grid-column: 1/4;
+  grid-row: 1;
+  background: url(imgs/portfolioImg.png) no-repeat center;
+  background-size: cover;
+}
+
+.home .projects .field{
+  left: 0;
+  width: 50%;
+  background-color: yellow;
+}
+
+.home .projects h3{
+  left: 25%;
+  margin-left: -53px;
+}
+
+.home .skills{
+  position: relative;
+  grid-column: 4/9;
+  grid-row: 1;
+  background: url(imgs/cootiesImg.png) no-repeat center;
+  background-size: cover;
+}
+
+.home .skills .field{
+  right: 0;
+  width: 80%;
+  background-color: yellow;
+}
+
+.home .skills h3{
+  left: 60%;
+  margin-left: -36px;
+}
+
+.home .filler1{
+  grid-column: 9/11;
+  grid-row: 1;
+}
+
+.home .filler2{
+  grid-column: 1/3;
+  grid-row: 2;
+}
+
+.home .experience{
+  grid-column: 3/6;
+  grid-row: 2;
+  background: url(imgs/restaurantReviewImg.png) no-repeat;
+  background-size: contain;
+  background-position: left;
+}
+
+.home .experience .field{
+  left: 0;
+  width: 60%;
+  background-color: yellow;
+}
+
+.home .experience h3{
+  left: 30%;
+  margin-left: -66px;
+}
+
+.home .filler3{
+  grid-column: 6/11;
+  grid-row: 2;
+}
+.home .education{
+  grid-column: 1/7;
+  grid-row: 3;
+  background: url(imgs/jasmineImg.png) no-repeat;
+  background-size: auto;
+  background-position: 0 -105px;
+}
+
+.home .education .field{
+  right: 0;
+  width: 60%;
+  background-color: yellow;
+}
+
+.home .education h3{
+  left: 70%;
+  margin-left: -63px;
+}
+
+.home .aboutMe{
+  grid-column: 7/11;
+  grid-row: 3;
+  background: url(imgs/memoryImg.png) no-repeat;
+  background-size: contain;
+  background-position: left;
+}
+
+.home .aboutMe .field{
+  left: 0;
+  width: 50%;
+  background-color: yellow;
+}
+
+.home .aboutMe h3{
+  left: 25%;
+  margin-left: -55px;
+}
+
+
+/* END HOME */
+
+main.skills div{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  justify-items: center;
+}
+
+.skills h3 {
+  text-align: center;
+}
+
+.skills li {
+  margin-bottom: 10px;
+  justify-self: start;
+}
+
+ul {
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.skillSection{
+  max-width: 80%;
+}
+
+.experience section{
+  margin-left: 10px;
+}
+.experience .company{
+  margin-left: 10px;
+}
+
+article {
+  margin-bottom: 10px;
+}
+
+footer {
+  grid-area: footer;
+  border-top:3px solid var(--lgrey);
+  text-align: right;
+  padding-top: 5px;
+}
+
+h1, h2, h3, h4, a {
+  color: var(--dgrey);
+  font-weight: 600;
+  margin: 7px 0px 7px 0px;
+}
+
+p {
+  margin: 0px 0px 10px 0px;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bolder;
+}
+
+h4{
+  margin: 5px 0;
+
+}
+
+img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+li {
+  list-style: none;
+}
+
+i {
+  margin-left: 10px;
+  color: var(--dgrey);
+}
+/* BY CLASS--------------------------------------------------------- */
+
+
+.mainFocal {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+.color-group {
+  text-align: center;
+}
+
+.colorBox {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bluebox {
+  background-color: var(--blue);
+}
+
+.dgreybox {
+  background-color: var(--dgrey);
+}
+
+.lgreybox {
+  background-color: var(--lgrey);
+}
+
+.workContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows:
+  border-bottom: solid 1px var(--dgrey);
+  grid-gap: 20px;
+}
+
+.workCard {
+  text-align: center;
+}
+
+.workText {
+  vertical-align: top;
+  font-size: 30px;
+  margin: 5px;
+  margin-bottom: 0px;
+}
+
+.workLink {
+  font-size: 10px;
+  text-overflow: ellipsis;
+}
+
+
+/* BY ID--------------------------------------------------------- */
+#sidebar {
+  width: 20%;
+  margin-top: 100px;
+}
+
+#sidebar:hover {
+  border
+}
+
+#fWork {
+  margin-bottom: 0px;
+}
+
+
+ /* BY RESPONSIVE---------------------------------------------------- */
+/* To remove color sidebar from main display at 650px */
+@media screen and (max-width:650px) {
+  #sidebar {
+    position: absolute;
+    top: 0px;
+    left: -120px;
+    width: 120px;
+    height: 100%;
+    transition: 0.4s;
+    background-color: #f9f9f9;
+    margin-top: 0px;
+    padding-top: 120px;
+    border-right: 5px solid var(--lgrey);
+  }
+
+  #sidebar:hover {
+    border-right: 7px solid var(--dgrey);
+  }
+
+  .work {
+    width: 45%;
+    text-align: center;
+  }
+
+main {
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .open {
+    transform: translate(120px,0px);
+  }
+
+}
+@media screen and (max-width:550px) {
+  .workText {
+    font-size: 20px;
+  }
+
+  header {
+    height: 80px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
+/* To remove the color menu button when screen is large enough to support a sidebar */
+@media screen and (min-width:651px) {
+  /* #colorMenu {
+    display: none;
+  } */
+}
+@media screen and (min-width:900px) {
+  body {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

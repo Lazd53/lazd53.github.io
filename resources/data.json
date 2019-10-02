@@ -1,0 +1,222 @@
+{
+  "projects":{
+    "name": "Projects",
+    "navID": 1,
+    "link": "projects",
+    "subCat":{
+      "frontEnd": {
+        "subCatID": 1,
+        "name": "Udacity Front-End Nanodegree",
+        "projects": [
+          {
+            "projectName": "Portfolio",
+            "projectID": 1.1,
+            "projectUrl": "projects/PortfolioSite/index.html",
+            "projectImg": "images/concrete.jpg",
+            "gitHubUrl": "other example",
+            "projectDescription": "The original version of this very page! While the original version had almost no JavaScript, the live version in front of you is now a single-page app.",
+            "whatLearned": "This project was to show understanding of HTML (including semantic markup) and CSS."
+          },
+          {
+          "projectName": "Memory Game",
+          "projectID": 1.2,
+          "projectUrl": "#example",
+          "projectImg": "images/concrete.jpg",
+          "gitHubUrl": "other example",
+          "projectDescription": "This is a digital version of the card game Memory. Try matching two cards together!",
+          "whatLearned": "This project was to show understanding of JavaScript and how it can be used to manipulate the DOM, but was before learning OOP."
+        },
+        {
+          "projectName": "Cooties, Run!",
+          "projectID": 1.3,
+          "projectUrl": "#example",
+          "projectImg": "images/concrete.jpg",
+          "gitHubUrl": "other example",
+          "projectDescription": "This is a clone of the classic frogger arcade game, with a 3rd grade twist.",
+          "whatLearned": "This project was to show understanding of objects and classes in JavaScript to create sprites on Canvas."
+        },
+        {
+        "projectName": "Feed Reader Testing",
+        "projectID": 1.4,
+        "projectUrl": "#example",
+        "projectImg": "images/concrete.jpg",
+        "gitHubUrl": "other example",
+        "projectDescription": "Create a number of tests for an RSS reader (provided by Udacity). ",
+        "whatLearned": ""
+      },
+      {
+        "projectName": "Restaurant Reviews App",
+        "projectID": 1.5,
+        "projectUrl": "example",
+        "projectImg": "images/concrete.jpg",
+        "gitHubUrl": "other example",
+        "projectDescription": "I was provided with a static site, and asked to make it responsive, accessible, and create a ServiceWorker for data caching and offline use.",
+        "whatLearned": "This project was to prove that I could work within the provided app to make it responsive, accessible, and create a ServiceWorker. There was also some CSS work to make the original design less terrible."
+      }
+      ]
+    },
+      "fullStack": {
+        "subCatID": 2,
+        "name": "Udacity Full Stack Nanodegree",
+        "projects": [
+          {
+            "projectName": "Test",
+            "projectID": 2.1,
+            "projectUrl": "example",
+            "projectImg": "images/concrete.jpg",
+            "gitHubUrl": "other example",
+            "projectDescription": "The original version of this very page! While the original version had almost no JavaScript, the live version in front of you is now a single-page app.",
+            "whatLearned": "This project was to show understanding of HTML (including semantic markup) and CSS."
+          }
+      ]
+    }
+    }
+
+},
+  "experience":{
+    "name": "Experience",
+    "link": "experience",
+    "navID": 2,
+    "subCat":{
+      "frontEnd": {
+        "type": "Front-End Developer",
+        "subCatID": 2.1,
+        "companyList":
+          [ {"name": "Intrida",
+            "role": "Independent Consultant/Contractor",
+            "dates": "April - September 2019",
+            "business": "Small startup",
+            "project": "ElectronJS App for document coordination"
+          }
+          ]
+      },
+      "architecture":{
+        "type": "Architecture/Engineering/Construction",
+        "subCatID": 2.2,
+        "companyList": [
+            {
+            "name":"Ratcliff",
+            "role": "Architect",
+            "dates": "2014-2018",
+            "business": "Medium sized architecture office",
+            "project": "Healthcare"
+          },
+          {
+            "name":"Shah Kawasaki Architects",
+            "role": "Architect",
+            "dates": "2010-2014",
+            "business": "Small architecture office",
+            "project": "Healthcare, Government, and Education"
+          },
+          {
+            "name":"Modulus Consulting",
+            "role": "Consultant",
+            "dates": "2012-2013",
+            "business": "Small/Medium BIM consultancy firm to the AEC industry",
+            "project": "Residential, Museum, Commercial, Industrial, and Research"
+          },
+          {
+            "name":"Degenkolb Engineers",
+            "role": "CAD/BIM Specialist",
+            "dates": "2009-2010",
+            "business": "Medium/large structural engineering firm",
+            "project": "Healthcare and Education"
+          }
+        ]
+        }
+      }
+  },
+  "skills":{
+    "name": "Skills",
+    "link": "skills",
+    "navID": 3,
+    "subCat":{
+      "frontEnd":{
+        "name": "Front-End Development",
+        "subCatID":3.1,
+        "skillList":[
+          ["HTML5", ["ARIA", "Bootstrap"]],
+          ["CSS3", ["Responsive Design", "Flexbox", "Grid", "SCSS"]],
+          ["JavaScript ES6", [
+            "Object Oriented Programming", "testing (Jasmine)", "fetching from APIs", "jQuery", "React"]
+          ]
+        ]
+      },
+      "fullStack":{
+        "name": "Full-Stack Development",
+        "subCatID": 3.2,
+        "skillList": [
+          ["SQL database"],
+          ["Apache"],
+          ["Python"],
+          ["Git"],
+          ["Google OAuth"]
+        ]
+      },
+      "design":{
+        "name": "Design Thinking",
+        "subCatID": 3.3,
+        "skillList":[
+          ["Diagramming workflows, adjacencies, timelines, etc"],
+          ["Creating/adhering to design standards"],
+          ["Creating layouts"]
+        ]
+      },
+      "interpersonal":{
+        "name": "Interpersonal",
+        "subCatID": 3.4,
+        "skillList":[
+          ["Direct client interactions", ["Work directly with client representatives spanning many levels of large company/government organizations"]],
+          ["Direct user interactions and interviews", ["Responsible for listening and incorporating user needs"]],
+          ["Client presentations"],
+          ["Experience working in teams of all sizes"],
+          ["Experience coordinating diverse teams of engineers"],
+          ["Good writing skills, developed 100+ page feasibility report for client"]
+        ]
+      },
+      "programs":{
+        "name": "Programs",
+        "subCatID": 3.5,
+        "skillList":[
+          ["Adobe", ["Photoshop", "Illustrator", "InDesign"]],
+          ["Autodesk", ["Revit", "Navisworks", "AutoCAD", "BIM 360"]],
+          ["Misc", ["Atom", "Word", "Excel", "Bluebeam"]]
+        ]
+      }
+
+    }
+  },
+  "education":{
+    "name": "Education",
+    "link": "education",
+    "navID": 4,
+    "subCat":{
+      "berkeley":{
+        "name": "UC Berkeley",
+        "year": "2009",
+        "subInfo": "BA in architecture"
+      },
+      "leed": {
+        "name": "LEED Accredited Professional (LEED AP)",
+        "year": "2009"
+      },
+      "arch": {
+        "name": "Architecture License",
+        "year": "2016",
+        "subInfo": "California (C35695)"
+      },
+      "udacity": {
+        "name": "Udacity",
+        "multDegrees": [
+          {"name": "Full Stack Web Developer Nanodegree", "year": "2018"},
+          {"name": "Front End Web Developer Nanodegree", "year": "2019"}
+        ]
+      }
+    }
+  },
+  "aboutMe":{
+    "name": "About Me",
+    "link": "aboutMe",
+    "navID": 5
+  }
+}
