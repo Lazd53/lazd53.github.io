@@ -59,7 +59,6 @@ let controller = {
   },
 
   changeView(destination){
-    console.log(destination);
     viewMain.changeView(destination);
   },
 
@@ -135,6 +134,7 @@ let viewNav = {
 let viewMain = {
   init(){
     this.main = document.querySelector("main");
+    this.body = document.querySelector("body");
     this.nav = document.querySelector("nav");
   },
 
@@ -144,19 +144,21 @@ let viewMain = {
         this.main.removeChild(this.main.firstChild);
       }
     }
-    this.main.removeAttribute("class");
+    this.body.removeAttribute("class");
   },
 
   changeView(view){
     this.clear();
     let fragment = controller.getFragment(view);
     if (view != "home"){
-      this.nav.remove("hide");
+      console.log("this isn't home");
+      this.nav.classList.remove("hide");
     } else if (view == "home"){
+      console.log("kansas");
       this.nav.classList.add("hide");
     }
     this.main.appendChild(fragment);
-    this.main.classList.add(view);
+    this.body.classList.add(view);
   }
 
 }
@@ -243,13 +245,13 @@ let viewProjects = {
     card.classList.add("workCard");
     let img = document.createElement("IMG");
     img.setAttribute("src", project.projectImg);
-    let name = document.createElement("H2");
+    let link = document.createElement("a")
+    link.href = project.projectUrl;
+    let name = document.createElement("H3");
     name.innerHTML = project.projectName;
-    let link = document.createElement("A");
-    link.innerHTML = project.gitHubUrl;
-
+    link.appendChild(name);
     card.appendChild(img);
-    card.appendChild(name);
+    card.appendChild(link);
 
     return card;
   }
