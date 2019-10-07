@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"<
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="resources/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  </head>
+  <body>
+    <div class="flexColumn">
+      <header>
+        <h1> MEMORY </h1>
+      </header>
+
+      <div class="container">
+        <div class="board" id="board">
+          <div id="innerBoard" class="innerBoard">
+          </div>
+        </div>
+
+        <div class="infoBar">
+          <div class="innerScore">
+            <div class="timeContainer">
+              <p class="timerText"><span id="min">0</span>:<span id="sec">00</span></p>
+            </div>
+
+            <div class="moves">
+              <div class="scoreContainer">
+                <p class="noMoves"><span id="numMoves">5</span> moves</p>
+                <div id="starcontainer">
+                  <i id="star1" class="star fas fa-star icon"></i>
+                  <i id="star2" class="star fas fa-star icon"></i>
+                  <i id="star3" class="star fas fa-star icon"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="matchContainer">
+              <i id="battery" class="matches fas fa-battery-quarter fa-2x deadstar"></i>
+              <i id="brush" class="matches fas fa-brush fa-2x deadstar"></i>
+              <i id="car" class="matches fas fa-car-crash fa-2x deadstar"></i>
+              <i id="cube" class="matches fas fa-cube fa-2x deadstar"></i>
+              <i id="feather" class="matches fas fa-feather-alt fa-2x deadstar"></i>
+              <i id="ankh" class="matches fas fa-ankh fa-2x deadstar"></i>
+              <i id="grad" class="matches fas fa-graduation-cap fa-2x deadstar"></i>
+              <i id="compass" class="matches fas fa-drafting-compass fa-2x deadstar"></i>
+            </div>
+            <div id="reset" class="reset"><i class="fas fa-undo fa icon"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hideContainer" class="endOfGameContainer hide">
+      <div class="endOfGame">
+        <h2>Congratulations!</h2>
+        <p> You won with <span id="finalScore">?</span> guesses!</p>
+        <p class="timerText"><span id="finalTime">0</span></p>
+        <div id="stars"></div>
+        <div id="restart" class="restart"> Play again? </div>
+      </div>
+
+    <script src="resources/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,288 @@
+/* Variables----------------- */
+:root{
+  --bgColor: lightcyan;
+  --cdColor: lightseagreen;
+  --bdColor: darkcyan;
+}
+
+/* BY TAG----------------- */
+
+i {
+  color: var(--cdColor);
+  margin-top: auto;
+  margin-bottom: auto;
+  pointer-events: none;
+}
+
+h1, h2 {
+  color: var(--bdColor);
+  text-align: center;
+  font-family: verdana, sans-serif;
+}
+
+h1 {
+  margin: 10px 0px;
+}
+
+p {
+  color: var(--bdColor);
+  font-family: helvetica, sans-serif;
+}
+/* BY CLASS----------------- */
+.flexColumn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  width: 350px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.board {
+  width: 350px;
+  height: 350px;
+  background-color: var(--bgColor);
+  border-radius: 8px;
+  border: 4px solid var(--bdColor);
+  margin-bottom: 15px;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+
+.innerBoard {
+  display: grid;
+  height: calc(100% - 30px);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 3%;
+  margin: 15px;
+}
+
+.winCard {
+  margin-top: 37px;
+  height: 300px;
+  width: 300px;
+  background-color: var(--bgColor);
+  border-radius: 8px;
+  border: 4px solid var(--bdColor);
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+
+.card {
+  border-radius: 8px;
+  border: 4px solid var(--bdColor);
+  background-color: var(--cdColor);
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  box-shadow: 4px 4px 4px lightgrey;
+  cursor: pointer;
+  transition-duration: .5s;
+  color: var(--cdColor);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.flipCard {
+  animation-name: flip;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  pointer-events: none;
+}
+@keyframes flip {
+  50% {
+    transform: scaleX(0);
+    background-color: var(--cdColor);
+    transform-origin: 30%;
+  }
+  100% {
+    transform: scaleX(100%);
+    /* transform: translateX(0px); */
+    background-color: white;
+  }
+}
+
+.snap {
+  animation-name: snaps;
+  animation-duration: 1s;
+}
+
+@keyframes snaps {
+  95% {
+    transform: scale(1.4);
+    box-shadow: none;
+  }
+  100%{
+    transform: scale(1.0);
+  }
+}
+
+.match {
+  background-color: white;
+  opacity: .5;
+  pointer-events: none;
+}
+
+      /* Game Information Bar */
+.infoBar {
+  width: 350px;
+  height: 60px;
+  border-radius: 8px;
+  border: 4px solid var(--bdColor);
+  background-color: var(--bgColor);
+  display: flex;
+  justify-content: flex-start;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+
+.innerScore {
+  height: calc(100% - 30px);
+  width: 100%;
+  margin: 15px;
+  display: flex;
+}
+
+.timeContainer {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timerText {
+  font-family: "Orbitron", sans-serif;
+}
+
+.moves {
+  width: 60%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.scoreContainer {
+  height: 45px;
+  align-self: center;
+}
+
+.noMoves {
+  margin-bottom: 1px;
+  margin-top: 2px;
+}
+
+.matchContainer {
+  width: 75%;
+  height: 150px;
+  justify-content: center;
+  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 10%;
+  display: none;
+}
+
+.showIcon {
+  visibility: visible;
+}
+
+.matches {
+  color: var(--bdColor);
+}
+
+.deadstar {
+  color: var(--bgColor);
+  text-shadow: 1px 1px 4px var(--cdColor);
+}
+
+.hide {
+  display: none;
+}
+
+.reset {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  color: var(--bdColor);
+}
+
+.endOfGame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.endOfGameContainer {
+  position: absolute;
+  background-color: var(--bgColor);
+  height: 500px;
+  width: 300px;
+  top: 50px;
+  left: calc(50% - 150px);
+  border-radius: 8px;
+  border: 4px solid var(--bdColor);
+  box-shadow: 4px 4px 4px rgba(211,211,211,.5);
+}
+
+.restart {
+  color: var(--bdColor);
+  border: 2px solid var(--bdColor);
+  border-radius: 4px;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+
+/* BY RESPONSIVE----------------- */
+
+@media screen and (min-width:750px) {
+
+  .board {
+    width: 450px;
+    height: 450px;
+  }
+
+  .container {
+    width: 750px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .infoBar {
+    width: 150px;
+    height: 450px;
+    margin-left: 50px;
+  }
+
+  .innerScore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .timeContainer {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: flex-start
+  }
+
+  .reset {
+    margin-bottom: 15px;
+    margin-top: 30px;
+  }
+
+  .matchContainer {
+    display: grid;
+  }
+}

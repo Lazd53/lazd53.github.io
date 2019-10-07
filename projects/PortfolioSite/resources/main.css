@@ -1,0 +1,196 @@
+/* colors: #02b3e4, #2d3c49, #7d97ad,  */
+
+/* VARIABLES--------------------------------------------------------- */
+:root {
+  --blue:#02b3e4;
+  --dgrey: #2d3c49;
+  --lgrey: #7d97ad;
+}
+/* BY TAG--------------------------------------------------------- */
+body {
+  display: flex;
+  font-family: 'Montserrat';
+  /* arial, sans-serif; */
+}
+
+main {
+  width: 80%;
+  order: 1;
+  margin-right:50px;
+}
+
+header {
+  border-bottom: 3px solid var(--lgrey);
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+footer {
+  border-top:3px solid var(--lgrey);
+  text-align: right;
+  padding-top: 5px;
+}
+
+h1, h2, h3, h4, a {
+  color: var(--dgrey);
+  font-weight: 600;
+  margin: 10px 0px 10px 0px;
+}
+
+p {
+  margin: 0px 0px 10px 0px;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+i {
+  margin-left: 10px;
+  color: var(--dgrey);
+}
+/* BY CLASS--------------------------------------------------------- */
+
+.mainFocal {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.color-group {
+  text-align: center;
+}
+
+.colorBox {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bluebox {
+  background-color: var(--blue);
+}
+
+.dgreybox {
+  background-color: var(--dgrey);
+}
+
+.lgreybox {
+  background-color: var(--lgrey);
+}
+
+.workContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.work {
+  width: 30%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.workText {
+  vertical-align: top;
+  font-size: 30px;
+  margin: 5px;
+  margin-bottom: 0px;
+}
+
+.workLink {
+  font-size: 10px;
+  text-overflow: ellipsis;
+}
+
+
+/* BY ID--------------------------------------------------------- */
+#sidebar {
+  width: 20%;
+  margin-top: 100px;
+}
+
+#sidebar:hover {
+  border
+}
+
+#fWork {
+  margin-bottom: 0px;
+}
+
+#nameTitle {
+  text-align: right;
+}
+
+ /* BY RESPONSIVE---------------------------------------------------- */
+/* To remove color sidebar from main display at 650px */
+@media screen and (max-width:650px) {
+  #sidebar {
+    position: absolute;
+    top: 0px;
+    left: -120px;
+    width: 120px;
+    height: 100%;
+    transition: 0.4s;
+    background-color: #f9f9f9;
+    margin-top: 0px;
+    padding-top: 120px;
+    border-right: 5px solid var(--lgrey);
+  }
+
+  #sidebar:hover {
+    border-right: 7px solid var(--dgrey);
+  }
+
+  .work {
+    width: 45%;
+    text-align: center;
+  }
+
+main {
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .open {
+    transform: translate(120px,0px);
+  }
+
+}
+@media screen and (max-width:550px) {
+  .workText {
+    font-size: 20px;
+  }
+
+  header {
+    height: 80px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
+/* To remove the color menu button when screen is large enough to support a sidebar */
+@media screen and (min-width:651px) {
+  /* #colorMenu {
+    display: none;
+  } */
+}
+@media screen and (min-width:900px) {
+  body {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
