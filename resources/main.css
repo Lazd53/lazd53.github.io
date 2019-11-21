@@ -11,17 +11,19 @@
   --educationColor: #D94D1A ;
   --aboutMeColor: #D94D1A ;
 }
-/* BY TAG--------------------------------------------------------- */
+/* General Content--------------------------------------------------------- */
 body {
   font-family: 'Verdana';
+  box-sizing: border-box;
   height: 100vh;
-  width: 80%;
+  width: 100%;
+  /* padding: 0 10%; */
   order: 1;
   margin-right: auto;
   margin-left: auto;
   display: grid;
   grid-template-rows: 100px 30px 1fr 20px;
-  grid-template-columns: auto;
+  grid-template-columns: 900px;
   grid-template-areas: "header" "nav" "main" "footer";
 
 }
@@ -32,6 +34,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* clear button styling */
+button{
+  border-style: none;
+  border-color: none;
+  border-image: none;
+  color: inherit;
+
 }
 
 .headerNameTitle h1, .headerNameTitle h4{
@@ -62,6 +73,75 @@ main {
 
 main.skills {
 }
+
+/* START MODAL */
+.modal {
+  position: fixed;
+  top: 5%;
+  left: 12%;
+  right: 12%;
+  bottom: 5%;
+  padding: 10px;
+  min-height: 200px;
+  border: 1px solid black;
+  background-color: white;
+  overflow: auto;
+  opacity: 1;
+}
+
+.modalBackdrop{
+  background-color: var(--lgrey);
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.closeButton{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  background-color: var(--lgrey);
+  border-radius: 50%;
+  border: 1px solid var(--dgrey);
+  color: white;
+}
+.closeButton:hover{
+  background-color: var(--blue);
+}
+
+.modal h2 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.projects .modal img{
+  width: 400px;
+  height: 400px;
+  margin-left: 40px;
+}
+
+.modalProjectLinks{
+  padding: 5px;
+  text-decoration: none;
+  border: 1px solid var(--dgrey);
+  border-radius: 5px;
+  background-color: var(--lgrey);
+  color: white;
+}
+
+.modalProjectLinksContainer{
+
+}
+
+/* END MODAL */
 
 /* START HOME */
 
@@ -222,7 +302,7 @@ main.skills {
 /* START PROJECT */
 
 .projects {
-  color: var(--projectColor);
+  /* color: var(--projectColor); */
 }
 
 .workContainer {

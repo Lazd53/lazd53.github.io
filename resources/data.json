@@ -83,10 +83,16 @@
         "subCatID": 2.1,
         "companyList":
           [ {"name": "Intrida",
+            "id": "2.1.1",
             "role": "Independent Consultant/Contractor",
             "dates": "April - September 2019",
             "business": "Small startup",
-            "project": "ElectronJS App for document coordination"
+            "project": "ElectronJS App for document coordination",
+            "text": ["I was hired as a contractor to produce the front-end portion of an ElectronJS app aimed at enterprise-type deployment.",
+            "My role included working with the in-house designer and another contractor team in charge of the server and back-end development.",
+            "A challenge I faced was the client directed that all development was to be done without outside frameworks or libraries.",
+            "I used a Model-View-Controller (MVC) design pattern to create multiple pages with large amounts of functionality, and managing multiple asynchronous calls to the server."
+            ]
           }
           ]
       },
@@ -96,31 +102,45 @@
         "companyList": [
             {
             "name":"Ratcliff",
+            "id": "2.2.1",
             "role": "Architect",
             "dates": "2014-2018",
             "business": "Medium sized architecture office",
-            "project": "Healthcare"
+            "project": "Healthcare",
+            "text": ["At Ratcliff I worked on design and permitting of hospital projects.",
+              "The biggest such project was a complicated new three story project with a complicated phasing scheme to keep the hospital active during construction.",
+              "It involved working closely with the contractor using a Integrated Project Delivery (IPD) - lite contract to ensure clean delivery of a good project.",
+              "I also worked on three pharmacy update projects for Sutter Health to bring them into compliance with new laws related to clean room environments for compounding medicines",
+              "The pharmacy projects involved extensive work with both a pharmacy standards team (developing the standards at the same time as design, resulting in shifting expectations), but also extensively interviewing and reviewing design decisions with the pharmacist in charge to make sure the needs of the hospital were met."
+            ]
           },
           {
             "name":"Shah Kawasaki Architects",
             "role": "Architect",
             "dates": "2010-2014",
             "business": "Small architecture office",
-            "project": "Healthcare, Government, and Education"
+            "project": "Healthcare, Government, and Education",
+            "text": ["At Shah Kawasaki I worked primarily on public buildings, including fire stations, crime labs, and a renovation of a historic classroom building.",
+              "I also wrote from scratch their Revit standards, and implemented them with the staff."]
           },
           {
             "name":"Modulus Consulting",
             "role": "Consultant",
             "dates": "2012-2013",
             "business": "Small/Medium BIM consultancy firm to the AEC industry",
-            "project": "Residential, Museum, Commercial, Industrial, and Research"
+            "project": "Residential, Museum, Commercial, Industrial, and Research",
+            "text": ["As a Building Information Modeling (BIM) consultant, my tasks were extremely varied by client. I would be sent to the clients office to to determine what their needs were, develope a game plan with them, and execute it.",
+            "This often required extensively learning and understanding the client's business, to determine how to use BIM to either aid in that or communicate this information to others",
+            "This included taking on tasks from developing phased models for presention to their clients, to making models for internal visualization, to assisting in creating their BIM standards for in-house teams."]
           },
           {
             "name":"Degenkolb Engineers",
             "role": "CAD/BIM Specialist",
             "dates": "2009-2010",
             "business": "Medium/large structural engineering firm",
-            "project": "Healthcare and Education"
+            "project": "Healthcare and Education",
+            "text": ["As an in-house drafter/modeler, it was my job to help the engineers digitize their design in either 2D or (preferably) 3D",
+            "Additionally, I assisted in creating new standards for using our 3D software and troubleshooting stubborn issues."]
           }
         ]
         }
