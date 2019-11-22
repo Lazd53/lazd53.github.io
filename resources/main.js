@@ -168,6 +168,7 @@ let viewMain = {
     close.id = "closeModal";
     close.addEventListener("click", this.deleteModal);
     modal.classList.add("modal");
+    modal.classList.add("flex-center")
     modal.id = "modal";
     modal.appendChild(close);
     modal.appendChild(content);
@@ -184,13 +185,11 @@ let viewMain = {
     for (element of toHide){
       element.tabIndex = -1;
     }
-    console.log(modalFocusable[modalFocusable.length-1]);
     modalFocusable[0].focus();
     modal.addEventListener('keydown', trapTabKey);
 
     function trapTabKey(){
       if (document.activeElement == modalFocusable[modalFocusable.length-1]){
-        console.log("its focused");
         modalFocusable[0].focus();
         console.log(modalFocusable[0])
       }
@@ -304,17 +303,21 @@ let viewProjects = {
     let frag = document.createDocumentFragment();
     let title = document.createElement("h2");
     let projectImg = document.createElement("img");
+    let textChunk = document.createElement("div");
     let projectDescription = document.createElement("p");
     let whatLearned = document.createElement("p")
     let linksContainer = document.createElement("div");
     let gitHubLink = document.createElement("a");
     let goToProject = document.createElement("a");
 
-    let arr = [title, projectImg, projectDescription, whatLearned, linksContainer];
+    let arr = [title, projectImg, textChunk, linksContainer];
 
 
     title.innerHTML = project.projectName;
     projectImg.src = project.projectImg;
+    textChunk.classList.add("projectModalText")
+    textChunk.appendChild(projectDescription);
+    textChunk.appendChild(whatLearned);
     projectDescription.innerHTML = project.projectDescription;
     whatLearned.innerHTML = project.whatLearned;
     gitHubLink.href = project.gitHubUrl;
