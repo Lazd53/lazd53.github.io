@@ -34,6 +34,7 @@ let controller = {
     model.viewProjects = viewProjects.init();
     model.viewSkills = viewSkills.init();
     model.viewExperience = viewExperience.init();
+    model.viewEducation = viewEducation.init();
   },
 
   setNavBarElements(){
@@ -168,7 +169,8 @@ let viewMain = {
     close.id = "closeModal";
     close.addEventListener("click", this.deleteModal);
     modal.classList.add("modal");
-    modal.classList.add("flex-center")
+    modal.classList.add("flex-center");
+    modal.classList.add("shadow");
     modal.id = "modal";
     modal.appendChild(close);
     modal.appendChild(content);
@@ -564,5 +566,71 @@ let viewExperience = {
   }
 }
 
+let viewEducation = {
+  init(){
+    this.education = controller.getFilteredData("education");
+
+    let title = document.createElement("H2");
+    title.innerHTML = this.education.name;
+
+    let allEdu = this.createEducationContent(this.education.subCat);
+
+    let content = document.createDocumentFragment();
+    content.appendChild(title);
+    content.appendChild(allEdu);
+    return content;
+  },
+
+  createEducationContent(subCat){
+    let content = document.createDocumentFragment();
+    let keys = Object.keys(subCat);
+    for (key of keys){
+      let newEl = this.createEducationElement(subCat[key]);
+      content.appendChild(newEl);
+    }
+    return content;
+  },
+
+  createEducationElement(elementInfo){
+    let element = document.createElement("div");
+    element.classList.add("educationItem")
+    let name = document.createElement('h3');
+    name.innerHTML = elementInfo.name;
+    element.appendChild(name);
+
+    if (elementInfo.year){
+      let year = document.createElement("p");
+      year.innerHTML = elementInfo.year;
+      element.appendChild(year);
+    }
+
+    if (elementInfo.subInfo){
+      let subInfo = document.createElement("p");
+      subInfo.innerHTML = elementInfo.subInfo;
+      subInfo.classList.add("eduItemSubInfo")
+      element.appendChild(subInfo);
+    }
+
+    if (elementInfo.multDegrees){
+      let list = document.createElement("ul");
+      list.classList.add("subDegrees");
+      for (item of elementInfo.multDegrees){
+        let degree = document.createElement("li");
+        degree.classList.add("educationItem");
+        let degreeName = document.createElement("h4");
+        let degreeYear = document.createElement("p");
+        degreeName.innerHTML = item.name;
+        degreeYear.innerHTML = item.year;
+        degree.appendChild(degreeName);
+        degree.appendChild(degreeYear);
+        list.appendChild(degree);
+      }
+      element.appendChild(list);
+    }
+
+    return element;
+  }
+
+}
 
 controller.init();

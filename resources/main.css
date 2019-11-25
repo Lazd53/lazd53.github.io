@@ -18,7 +18,6 @@ body {
   box-sizing: border-box;
   height: 100vh;
   width: 100%;
-  /* padding: 0 10%; */
   order: 1;
   margin-right: auto;
   margin-left: auto;
@@ -26,15 +25,7 @@ body {
   grid-template-rows: 100px 30px 1fr 20px;
   grid-template-columns: 900px;
   grid-template-areas: "header" "nav" "main" "footer";
-
-}
-
-header {
-  border-bottom: 3px solid var(--lgrey);
-  grid-area: header;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  grid-row-gap: 10px;
 }
 
 /* clear button styling */
@@ -46,14 +37,43 @@ button{
 
 }
 
-.headerNameTitle h1, .headerNameTitle h4{
-  margin: 0;
-}
 
 h1, h2, h3, h4, a {
   color: var(--dgrey);
   font-weight: 600;
 }
+
+.shadow{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flex-center{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* HEADER */
+header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 15px;
+  background-color: var(--dgrey);
+  justify-content: center;
+  border-radius: 5px;
+}
+
+header h1, header h4 {
+  color: white;
+  margin: 0;
+}
+
+/* END HEADER */
+
+
+/* NAV BAR */
 
 nav {
   grid-area: nav;
@@ -62,11 +82,16 @@ nav {
   border-bottom: solid 1px var(--lgrey);
   justify-items: center;
   align-items: center;
+  background-color: var(--dgrey);
+  border-radius: 5px;
 }
 
 .navLink {
   text-decoration: none;
+  color: white;
 }
+
+/* END NAV BAR */
 
 main {
   grid-area: main;
@@ -88,7 +113,6 @@ main.skills {
   overflow: auto;
   opacity: 1;
   padding-bottom: 30px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .modalBackdrop{
@@ -99,13 +123,6 @@ main.skills {
   right: 0;
   top: 0;
   bottom: 0;
-}
-
-.flex-center{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
 }
 
 .closeButton{
@@ -184,8 +201,9 @@ main.skills {
   margin: 0;
 }
 
-#homeGrid a, #homeGrid div{
-  border: 1px solid var(--ProjectDarkGrey);
+#homeGrid a, #homeGrid > div{
+  overflow: hidden;
+  border: 2px solid var(--ProjectDarkGrey);
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -195,7 +213,7 @@ main.skills {
   position: absolute;
   top: 50%;
   margin-top: -11px;
-  transition: left .5s;
+  transition: all .5s;
 }
 
 .home .field{
@@ -251,6 +269,7 @@ main.skills {
 .home .skills h3{
   left: 60%;
   margin-left: -36px;
+  color: white;
 }
 
 .home .filler1{
@@ -284,6 +303,10 @@ main.skills {
   margin-left: -66px;
 }
 
+.home .experience:hover .homeH3{
+  color: var(--ProjectDarkGrey);
+}
+
 .home .filler3{
   grid-column: 6/11;
   grid-row: 2;
@@ -313,7 +336,7 @@ main.skills {
   grid-row: 3;
   background: url(imgs/restaurantReviewImg.png) no-repeat;
   background-size: contain;
-  background-position: left;
+  background-position: right;
 }
 
 .home .aboutMe .field{
@@ -326,6 +349,12 @@ main.skills {
   left: 25%;
   margin-left: -55px;
 }
+
+.home .aboutMe:hover .homeH3{
+  color: var(--ProjectGrey);
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, .5);
+}
+
 
 
 /* END HOME */
@@ -416,6 +445,36 @@ ul {
   margin-left: 10px;
 }
 
+
+/* EDUCATION */
+
+.educationItem {
+  display: grid;
+  grid-template-columns: 1fr 60px;
+  margin-bottom: 20px;
+}
+
+li.educationItem{
+  margin-bottom: 0;
+}
+
+.educationItem h3 {
+  margin: 0;
+}
+
+.eduItemSubInfo{
+  font-style: italic;
+}
+
+.subDegrees{
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+/* END EDUCATION */
+
+
 article {
   margin-bottom: 10px;
 }
@@ -461,52 +520,12 @@ i {
 /* BY CLASS--------------------------------------------------------- */
 
 
-.mainFocal {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-
-.color-group {
-  text-align: center;
-}
-
-.colorBox {
-  width: 70px;
-  height: 70px;
-  border-radius: 5px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.bluebox {
-  background-color: var(--blue);
-}
-
-.dgreybox {
-  background-color: var(--dgrey);
-}
-
-.lgreybox {
-  background-color: var(--lgrey);
-}
 
 
 
 
 /* BY ID--------------------------------------------------------- */
-#sidebar {
-  width: 20%;
-  margin-top: 100px;
-}
 
-#sidebar:hover {
-  border
-}
-
-#fWork {
-  margin-bottom: 0px;
-}
 
 
  /* BY RESPONSIVE---------------------------------------------------- */

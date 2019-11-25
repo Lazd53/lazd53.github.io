@@ -207,7 +207,7 @@
     }
   },
   "education":{
-    "name": "Education",
+    "name": "Education & Certifications",
     "link": "education",
     "navID": 4,
     "subCat":{
@@ -218,6 +218,7 @@
       },
       "leed": {
         "name": "LEED Accredited Professional (LEED AP)",
+        "subInfo": "Leadership in Energy and Environmental Design",
         "year": "2009"
       },
       "arch": {
