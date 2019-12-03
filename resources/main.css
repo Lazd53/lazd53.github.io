@@ -22,7 +22,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   display: grid;
-  grid-template-rows: 100px 30px 1fr 20px;
+  grid-template-rows: 120px 40px 1fr 80px;
   grid-template-columns: 900px;
   grid-template-areas: "header" "nav" "main" "footer";
   grid-row-gap: 10px;
@@ -185,13 +185,13 @@ main.skills {
 
 /* START HOME */
 
-.home section{
+.home #homeGrid{
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(3, 140px);
-  grid-row-gap: 20px;
+  grid-template-rows: repeat(3, 100px);
+  grid-row-gap: 15px;
   grid-column-gap: 10px;
-  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 .homeGridItem{
@@ -199,6 +199,7 @@ main.skills {
   align-items: center;
   position: relative;
   margin: 0;
+  outline: none;
 }
 
 #homeGrid a, #homeGrid > div{
@@ -222,11 +223,11 @@ main.skills {
   height: 100%;
 }
 
-.home .gridHov:hover .field{
+.home .gridHov:hover .field, .home .gridHov:focus .field{
   width: 0;
 }
 
-.home .gridHov:hover .homeH3{
+.home .gridHov:hover .homeH3, .home .gridHov:focus .homeH3{
   left: 50%;
 }
 
@@ -248,15 +249,12 @@ main.skills {
   margin-left: -53px;
 }
 
-.home .projects.gridHov:hover .homeh3{
-  color: var(--ProjectLightOrange);
-}
-
 .home .skills{
   position: relative;
   grid-column: 4/9;
   grid-row: 1;
-  background: url(imgs/cootiesImg.png) no-repeat center;
+  background: url(imgs/cootiesImg.png) no-repeat;
+  background-position: 0 -59px;
   background-size: cover;
 }
 
@@ -275,7 +273,7 @@ main.skills {
 .home .filler1{
   grid-column: 9/11;
   grid-row: 1;
-  background-color: var(--ProjectDarkRed);
+  background-color: var(--ProjectDarkGrey);
 }
 
 .home .filler2{
@@ -303,7 +301,7 @@ main.skills {
   margin-left: -66px;
 }
 
-.home .experience:hover .homeH3{
+.home .experience:hover .homeH3, .home .experience:focus .homeH3{
   color: var(--ProjectDarkGrey);
 }
 
@@ -317,7 +315,7 @@ main.skills {
   grid-row: 3;
   background: url(imgs/jasmineImg.png) no-repeat;
   background-size: auto;
-  background-position: 0 -105px;
+  background-position: 0 -128px;
 }
 
 .home .education .field{
@@ -337,6 +335,11 @@ main.skills {
   background: url(imgs/restaurantReviewImg.png) no-repeat;
   background-size: contain;
   background-position: right;
+  transition: all .5s;
+}
+
+.home .aboutMe:focus, .home .aboutMe:hover {
+  background-position: left;
 }
 
 .home .aboutMe .field{
@@ -350,18 +353,28 @@ main.skills {
   margin-left: -55px;
 }
 
-.home .aboutMe:hover .homeH3{
-  color: var(--ProjectGrey);
-  text-shadow: 2px 2px 2px rgba(255, 255, 255, .5);
+.home .aboutMe:hover .homeH3, .home .aboutMe:focus .homeH3{
+  color: var(--ProjectDarkRed);
+  left: 75%;
 }
 
+.about-me{
+  border: 2px solid var(--ProjectDarkGrey);
+  border-radius: 5px;
+  padding: 20px 15px;
+}
+
+.about-me h3{
+  margin-top: 0;
+  margin-bottom: 7px;
+}
 
 
 /* END HOME */
 /* START PROJECT */
 
-.projects {
-  /* color: var(--ProjectLightOrange); */
+.featuredWork h2{
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .workContainer {
@@ -481,9 +494,15 @@ article {
 
 footer {
   grid-area: footer;
-  border-top:3px solid var(--lgrey);
   text-align: right;
-  padding-top: 5px;
+  padding: 15px 20px 15px 15px;
+  background-color: var(--dgrey);
+  border-radius: 5px;
+  color: white;
+}
+
+footer a {
+  color: inherit;
 }
 
 p {
@@ -517,16 +536,6 @@ i {
   margin-left: 10px;
   color: var(--dgrey);
 }
-/* BY CLASS--------------------------------------------------------- */
-
-
-
-
-
-
-/* BY ID--------------------------------------------------------- */
-
-
 
  /* BY RESPONSIVE---------------------------------------------------- */
 /* To remove color sidebar from main display at 650px */
